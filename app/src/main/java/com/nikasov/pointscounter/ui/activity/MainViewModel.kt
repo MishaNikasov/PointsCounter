@@ -18,8 +18,10 @@ class MainViewModel @Inject constructor() : ViewModel() {
     }
 
     fun addTable() {
-        val tableModel = TableModel("Миша", 0)
-        tableList.add(tableModel)
+        val tableModel1 = TableModel("Миша", 0)
+        val tableModel2 = TableModel("Алина", 0)
+        tableList.add(tableModel1)
+        tableList.add(tableModel2)
         updateList.postValue(true)
     }
 

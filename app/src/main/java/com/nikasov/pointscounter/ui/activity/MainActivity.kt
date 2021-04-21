@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.observe
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.nikasov.pointscounter.ui.adapter.TableAdapter
 import com.nikasov.pointscounter.databinding.ActivityMainBinding
@@ -28,8 +29,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupList() {
-        val layoutManager = LinearLayoutManager(this@MainActivity)
-        layoutManager.orientation = LinearLayoutManager.HORIZONTAL
+        val layoutManager = GridLayoutManager(this@MainActivity, 2)
 
         binding.tableRecycler.apply {
             adapter = tableAdapter
